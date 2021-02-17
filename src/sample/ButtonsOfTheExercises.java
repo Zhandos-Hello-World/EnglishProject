@@ -1,14 +1,25 @@
 package sample;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 import sample.Exercises.ImagesExercises.ExercisesOutput;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import sample.Exercises.ImagesExercises.dataBaseGrammar;
 
-public class ButtonsOfTheExercises {
+import java.net.URL;
+import java.util.ResourceBundle;
 
+public class ButtonsOfTheExercises extends dataBaseGrammar {
     private ExercisesOutput run = new ExercisesOutput();
+
+
     //array maybe
     @FXML
     private Button btn0;
@@ -305,5 +316,6 @@ public class ButtonsOfTheExercises {
     void btn32(ActionEvent event){
         run.setNum((byte)32);
     }
+
 
 }

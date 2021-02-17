@@ -1,6 +1,5 @@
 package sample;
 
-import com.sun.javafx.image.impl.General;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -55,6 +54,9 @@ public class dashboardController{
     @FXML
     void btnVocabulary(ActionEvent event) {
 
+    }
+    public void btnGrammarChoice(){
+        LoadUI("");
     }
     public void LoadUI(String ui){
         Parent root = null;
