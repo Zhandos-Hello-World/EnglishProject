@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.loginController">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="400.0" prefWidth="228.0" style="-fx-background-color: #0D0138FF;">
+               <children>
+                  <ImageView fitHeight="400.0" fitWidth="189.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/IntroImages/ShooterScreenshot-217-07-02-21.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="21.0" prefHeight="75.0" prefWidth="202.0" text="English A2 ">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.6449814126394051" centerY="0.41428571428571426" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9599999785423279" green="0.2207999974489212" blue="0.2207999974489212" opacity="0.8799999952316284" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="306.0" prefHeight="17.0" prefWidth="98.0" text="insta: dzhbaimurat01" textFill="#ffffffe0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="323.0" prefHeight="18.0" prefWidth="153.0" text="Email:200103398@stu.sdu.edu.kz" textFill="#ffffffe0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="341.0" prefHeight="17.0" prefWidth="112.0" text="ph: 87767773954" textFill="WHITE">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="270.0" style="-fx-background-color: #EAEAEAFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="50.0" layoutY="124.0" prefHeight="31.0" prefWidth="62.0" text="Username ">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTextField" layoutX="112.0" layoutY="127.0" prefHeight="26.0" prefWidth="173.0" promptText="Username" />
+            <Label layoutX="50.0" layoutY="168.0" prefHeight="31.0" prefWidth="62.0" text="Password">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="enterPasswordField" layoutX="112.0" layoutY="171.0" prefHeight="26.0" prefWidth="173.0" promptText="Password" />
+            <Button fx:id="loginButton" layoutX="66.0" layoutY="258.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="32.0" prefWidth="240.0" style="-fx-background-color: #0D0138FF;" text="Login" textFill="WHITE" />
+            <Button fx:id="cancelButton" layoutX="66.0" layoutY="304.0" mnemonicParsing="false" onAction="#cancelButton" prefHeight="32.0" prefWidth="240.0" style="-fx-background-color: #0D0138FF;" text="Cancel" textFill="WHITE" />
+            <Label fx:id="loginMessageLabel" layoutX="64.0" layoutY="219.0" prefHeight="31.0" prefWidth="244.0" textAlignment="JUSTIFY" textFill="RED">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

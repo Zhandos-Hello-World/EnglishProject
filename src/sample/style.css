@@ -1,0 +1,49 @@
+.btns{
+    -fx-background-color: #0D0138FF;
+}
+.btns:hover{
+    -fx-background-color: #0D1E5BFF;
+}
+.btns:pressed{
+    -fx-background-color: #0D0D79FF;
+}
+
+.paneMenu{
+    -fx-background-color: #0D0138FF;
+}
+
+
+
+.paneMenuMini{
+    -fx-background-color: #8813A2FF;
+    -fx-stroke: black;
+}
+.paneTop{
+    -fx-background-color: #8813A2FF;
+}
+
+
+.GrammarStyle{
+    -fx-background-color: green;
+}
+.GrammarStyle:hover{
+    -fx-background-color: #00B600FF;
+}
+.VocabularyStyle{
+    -fx-background-color: orange;
+}
+.VocabularyStyle:hover{
+    -fx-background-color: #FFCF00FF;
+}
+.ListeningStyle{
+    -fx-background-color: deepskyblue;
+}
+.ListeningStyle:hover{
+    -fx-background-color: #00D8FFFF;
+}
+.ReadingStyle{
+    -fx-background-color: darkred;
+}
+.ReadingStyle:hover{
+    -fx-background-color: red;
+}
