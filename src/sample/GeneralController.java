@@ -7,7 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
-import sample.Exercises.ImagesExercises.ExercisesOutput;
 
 
 import java.io.IOException;
@@ -38,12 +37,11 @@ public class GeneralController {
         }
         @FXML
         void dashboard(ActionEvent event) {
-            LoadUI("Dashboard");
+            LoadUI("dashboard");
         }
         @FXML
         void help(ActionEvent event) {
             LoadUI("Help");
-
         }
         @FXML
         void myAccount(ActionEvent event) {
