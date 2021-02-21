@@ -20,10 +20,29 @@ public class dataBaseGrammar {
     protected String getE21(int i, byte j){
         return e21[i][j];
     }
-    //This method need for subclass of the PresentPerfectSimpleShowAnswer.
-    protected int getC21Index(int index){
-        return c21[index];
+    protected String getECAR11(int i){
+        return ECAE11[i];
     }
-    
+
+
+
+
+    private String[][]e11 ={{"Luke: What", "? Sarah: I am watching TV."},  {"Luke:", "TV in the afternoon? Sarah: Yes, I do."},
+            {"Luke: What kind of programs ", "?"} ,{"Sarah: I ", "talk shows. But now I", "a sports show."},
+            {"Peter: What ", "?"}, {"Rebecca: He", "an architect but he"}, {"at the moment. He", "for a job desperately, because he"}, {"money for the house."},
+            {"Sandra: Can I have that magazine or you", "it?"}, {"Tim: No, I", " it"}, {"I", "that magazine. I"}, {"sports magazines.Sandra: I", "sports magazines."}};
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

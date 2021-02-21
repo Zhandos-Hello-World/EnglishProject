@@ -16,10 +16,7 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import sample.ExercisesGrammar.dataBaseGrammar;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -38,13 +35,11 @@ public class PresentPerfectSimpleController extends dataBaseGrammar implements I
     @FXML
     private BorderPane InstallationScene;
 
-    protected int [] election = {2,2,2,2,2,2,2,2,2,2};
-    public int[]getElection(){
-        return election;
-    }
+    protected static int [] election = {2,2,2,2,2,2,2,2,2,2};
+
 
     //set texts from (super class)dataBaseGrammar
-    private void getC1(int n, int[] election){
+    protected void getC1(int n){
         fp = new FlowPane();
         fp.setPadding(new Insets(20, 20, 20, 20));
         fp.setVgap(20);
@@ -59,7 +54,7 @@ public class PresentPerfectSimpleController extends dataBaseGrammar implements I
         //here We add numbers, labels, choices in the flowPane
         fp.getChildren().add(numbers(n + 1));
         fp.getChildren().add(label1);
-        fp.getChildren().add(choice(n, election));
+        fp.getChildren().add(choice(n));
         fp.getChildren().add(label2);
     }
     //The method for show explanation exercises
@@ -83,27 +78,33 @@ public class PresentPerfectSimpleController extends dataBaseGrammar implements I
     private StackPane checkAnswer(){
         //This button which check all exercises.
         checkAnswer = new Button("Check answer");
+        checkAnswer.setTextFill(new Color(1,1,1,1));
         checkAnswer.setStyle("-fx-background-color: green");
         checkAnswer.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
                 //New Scene which will be display correctAnswers
                 LoadUI("PresentPerfectSimple1ShowAnswers");
             }
         });
+        checkAnswer.setMinWidth(200);
+        checkAnswer.setMinHeight(100);
         //the button of the checkAnswer contains in StackPane for set the vBoxAdd
         StackPane stackPane = new StackPane();
+        stackPane.setMinHeight(100);
         stackPane.getChildren().add(checkAnswer);
         //I sent the stackPane in the initialize method
         return stackPane;
     }
     //The choice method through arg define index choices(array).
-    private MenuButton choice(int i, int[]election){
+    private MenuButton choice(int i){
         //this method for MenuButton.
         MenuItem choice1 = new MenuItem("since");
         MenuItem choice2 = new MenuItem("for");
-        MenuButton menuButton = new MenuButton("   ", null, choice1, choice2);
+        MenuButton menuButton = new MenuButton("      ", null, choice1, choice2);
+        menuButton.setMinWidth(100);
+        menuButton.setMinHeight(40);
+        menuButton.setStyle("-fx-background-color: white; -fx-stroke: black; -fx-text-fill: black");
         choice1.setOnAction(event -> {
             //since = 0;
             election[i] = 0;
@@ -118,7 +119,7 @@ public class PresentPerfectSimpleController extends dataBaseGrammar implements I
     }
 
 
-    private StackPane numbers(int i){
+    protected StackPane numbers(int i){
         //we create StackPane for circle
         StackPane stackPane = new StackPane();
         Circle circle = new Circle();
@@ -138,7 +139,7 @@ public class PresentPerfectSimpleController extends dataBaseGrammar implements I
         vBoxAdd.getChildren().add(tittle());
         for(int i = 0; i < getE21().length; i++){
             //for set texts, menuButtons, numbers in flowPane.
-            getC1(i, election);
+            getC1(i);
             //add the flowPane in vBoxAdd
             vBoxAdd.getChildren().add(fp);
             //I did do so because I wanted free space under each appeared new vBoxAdd
