@@ -96,7 +96,7 @@ public class PresentPerfectSimpleShowAnswer extends PresentPerfectSimpleControll
         rectangle.setWidth(740);
         rectangle.setHeight(150);
         rectangle.setFill(new Color(.29,.54,.86, 1));
-        Label label = new Label(getECAR11(getC21()[i]));
+        Label label = new Label(getECAR21(getC21()[i]));
         label.setTextFill(new Color(1,1,1, 1));
         label.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 25));
         label.setWrapText(true);
@@ -145,18 +145,6 @@ public class PresentPerfectSimpleShowAnswer extends PresentPerfectSimpleControll
         StackPane stackPane = new StackPane();
         stackPane.getChildren().add(rectangle);
         stackPane.getChildren().add(showLabel);
-        return stackPane;
-    }
-    // I want create icons. But I can't because I haven't knowlege
-    private StackPane LoadUI(String ui){
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource(ui + ".fxml"));
-        } catch (IOException e) {
-            Logger.getLogger(PresentPerfectSimpleController.class.getName()).log(Level.SEVERE, null, e);
-        }
-        StackPane stackPane = new StackPane();
-        stackPane.getChildren().add(root);
         return stackPane;
     }
 

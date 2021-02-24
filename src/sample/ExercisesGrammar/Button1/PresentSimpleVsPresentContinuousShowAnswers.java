@@ -43,11 +43,13 @@ public class PresentSimpleVsPresentContinuousShowAnswers extends PresentPerfectS
         fp.setOrientation(Orientation.VERTICAL);
         System.out.println();
         int count = 0;
-        for(int i = 0; i < election.length; i++){
-            if(election[i] == c21[i]){
+        int h = getC11().length;
+        for(int i = 0; i < getC11().length; i++){
+            if(election[i] == getC11()[i]){
                 count++;
             }
         }
+        count = (count / h) * 10;
         //This texts for show statistics
         Label[]labels = {new Label("You have completed this test."),
                 new Label("Correct answers: " + count + "/10"), new Label("Your score is " + (int)(count * 10) +"%."),
@@ -75,8 +77,8 @@ public class PresentSimpleVsPresentContinuousShowAnswers extends PresentPerfectS
         fp.setVgap(20);
         fp.setHgap(20);
         //set texts which contains in the array.
-        Label label1 = new Label(getE21(n, (byte)0));
-        Label label2 = new Label(getE21(n, (byte)1));
+        Label label1 = new Label(getE11(n, (byte)0));
+        Label label2 = new Label(getE11(n, (byte)1));
         //give values for labels with class Font which contains in the javafx
         label1.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 25));
         label2.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 25));
@@ -97,7 +99,7 @@ public class PresentSimpleVsPresentContinuousShowAnswers extends PresentPerfectS
         rectangle.setWidth(740);
         rectangle.setHeight(150);
         rectangle.setFill(new Color(.29,.54,.86, 1));
-        Label label = new Label(getECAR11(getC21()[i]));
+        Label label = new Label(getECAR11(i));
         label.setTextFill(new Color(1,1,1, 1));
         label.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 25));
         label.setWrapText(true);
@@ -112,22 +114,26 @@ public class PresentSimpleVsPresentContinuousShowAnswers extends PresentPerfectS
         boolean check = false;
         //this default value if user doesn't choice answer
         String showTextAnswer = "no answer";
-        if(election[i] == getC21()[i]){
+        if(election[i] == getC11()[i]){
             if(election[i] == 0){
-                //since = 0;
-                showTextAnswer = "since";
+                showTextAnswer = getCC11(i, 0);
             }
             else if(election[i] == 1){
-                //for = 1;
-                showTextAnswer = "for";
+                showTextAnswer = getCC11(i, 1);
+            }
+            else if(election[i] == 2){
+                showTextAnswer = getCC11(i, 2);
             }
             check = true;
         }
         if(election[i] == 0){
-            showTextAnswer = "since";
+            showTextAnswer = getCC11(i, 0);
         }
         else if(election[i] == 1){
-            showTextAnswer = "for";
+            showTextAnswer = getCC11(i, 1);
+        }
+        else if(election[i] == 2){
+            showTextAnswer = getCC11(i, 2);
         }
         //Text need to convert in the Label
         Label showLabel = new Label(showTextAnswer);
@@ -137,7 +143,7 @@ public class PresentSimpleVsPresentContinuousShowAnswers extends PresentPerfectS
             showLabel.setStyle("-fx-text-fill: green");
         }
         //I give value for label
-        showLabel.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 25));
+        showLabel.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 15));
         Rectangle rectangle = new Rectangle();
         rectangle.setFill(new Color(1,1,1, 1));
         rectangle.setStroke(new Color(.74,.74,.74, 1));
@@ -164,7 +170,7 @@ public class PresentSimpleVsPresentContinuousShowAnswers extends PresentPerfectS
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         vBoxAddA.getChildren().add(statistics());
-        for(int i = 0; i < getE21().length; i++){
+        for(int i = 0; i < getE11().length; i++){
             getC1(i);
             //for add Vbox
             vBoxAddA.getChildren().add(fp);
@@ -173,7 +179,7 @@ public class PresentSimpleVsPresentContinuousShowAnswers extends PresentPerfectS
             vBoxAddA.getChildren().add(announcement(i));
         }
         //for default values
-        Arrays.fill(election, 2);
+        Arrays.fill(election, 3);
     }
 
 

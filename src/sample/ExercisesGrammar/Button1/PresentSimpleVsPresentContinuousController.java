@@ -14,8 +14,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
+import sample.ExercisesGrammar.Button2.PresentPerfectSimpleController;
 import sample.ExercisesGrammar.dataBaseGrammar;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -35,7 +35,7 @@ public class PresentSimpleVsPresentContinuousController extends dataBaseGrammar 
     @FXML
     private BorderPane InstallationScene;
 
-    protected static int [] election = {2,2,2,2,2,2,2,2,2,2};
+    protected static int [] election = {3, 3, 3, 3, 3,  3, 3, 3, 3, 3,  3, 3, 3, 3, 3};
 
 
     //set texts from (super class)dataBaseGrammar
@@ -45,8 +45,8 @@ public class PresentSimpleVsPresentContinuousController extends dataBaseGrammar 
         fp.setVgap(20);
         fp.setHgap(20);
         //set texts which contains in the array.
-        Label label1 = new Label(getE21(n, (byte)0));
-        Label label2 = new Label(getE21(n, (byte)1));
+        Label label1 = new Label(getE11(n, (byte)0));
+        Label label2 = new Label(getE11(n, (byte)1));
         //give values for labels with class Font which contains in the javafx
         label1.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 25));
         label2.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 25));
@@ -84,7 +84,7 @@ public class PresentSimpleVsPresentContinuousController extends dataBaseGrammar 
             @Override
             public void handle(ActionEvent event) {
                 //New Scene which will be display correctAnswers
-                LoadUI("PresentPerfectSimple1ShowAnswers");
+                LoadUI("PresentSimpleVsPresentContinuousShowAnswers");
             }
         });
         checkAnswer.setMinWidth(200);
@@ -99,25 +99,27 @@ public class PresentSimpleVsPresentContinuousController extends dataBaseGrammar 
     //The choice method through arg define index choices(array).
     private MenuButton choice(int i){
         //this method for MenuButton.
-        MenuItem choice1 = new MenuItem("since");
-        MenuItem choice2 = new MenuItem("for");
-        MenuButton menuButton = new MenuButton("      ", null, choice1, choice2);
+        MenuItem choice1 = new MenuItem(getCC11(i, 0));
+        MenuItem choice2 = new MenuItem(getCC11(i, 1));
+        MenuItem choice3 = new MenuItem(getCC11(i, 2));
+        MenuButton menuButton = new MenuButton("      ", null, choice1, choice2, choice3);
         menuButton.setMinWidth(100);
         menuButton.setMinHeight(40);
         menuButton.setStyle("-fx-background-color: white; -fx-stroke: black; -fx-text-fill: black");
         choice1.setOnAction(event -> {
-            //since = 0;
             election[i] = 0;
             menuButton.setText(choice1.getText());
         });
         choice2.setOnAction(event -> {
-            //for = 1;
             election[i] = 1;
             menuButton.setText(choice2.getText());
         });
+        choice3.setOnAction(event -> {
+            election[i] = 2;
+            menuButton.setText(choice3.getText());
+        });
         return menuButton;
     }
-
 
     protected StackPane numbers(int i){
         //we create StackPane for circle
@@ -137,7 +139,7 @@ public class PresentSimpleVsPresentContinuousController extends dataBaseGrammar 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         vBoxAdd.getChildren().add(tittle());
-        for(int i = 0; i < getE21().length; i++){
+        for(int i = 0; i < getE11().length; i++){
             //for set texts, menuButtons, numbers in flowPane.
             getC1(i);
             //add the flowPane in vBoxAdd
@@ -154,7 +156,7 @@ public class PresentSimpleVsPresentContinuousController extends dataBaseGrammar 
         try {
             root = FXMLLoader.load(getClass().getResource(ui + ".fxml"));
         } catch (IOException e) {
-            Logger.getLogger(sample.ExercisesGrammar.Button2.PresentPerfectSimpleController.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(PresentPerfectSimpleController.class.getName()).log(Level.SEVERE, null, e);
         }
         InstallationScene.setCenter(root);
     }

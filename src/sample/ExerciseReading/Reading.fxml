@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="installScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ExerciseReading.ReadingController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="62.0" layoutY="29.0" mnemonicParsing="false" onAction="#btn1" prefHeight="138.0" prefWidth="190.0" text="Hobbies: Why do people collect?" wrapText="true" />
+            <Button layoutX="304.0" layoutY="29.0" mnemonicParsing="false" onAction="#btn2" prefHeight="138.0" prefWidth="190.0" text="Growing up poor" wrapText="true" />
+            <Button layoutX="543.0" layoutY="29.0" mnemonicParsing="false" onAction="#btn3" prefHeight="138.0" prefWidth="190.0" text="Mummy of a lost Egyptian queen identified" wrapText="true" />
+            <Button layoutX="63.0" layoutY="216.0" mnemonicParsing="false" onAction="#btn4" prefHeight="138.0" prefWidth="190.0" text="Frogs in love: Romeo and Juliet" wrapText="true" />
+            <Button layoutX="305.0" layoutY="216.0" mnemonicParsing="false" onAction="#btn5" prefHeight="138.0" prefWidth="190.0" text="Travel: The Rock Garden of Chandigarh" wrapText="true" />
+            <Button layoutX="544.0" layoutY="216.0" mnemonicParsing="false" onAction="#btn6" prefHeight="138.0" prefWidth="190.0" text="Active Villagers" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

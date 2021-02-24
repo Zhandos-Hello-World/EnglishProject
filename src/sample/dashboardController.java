@@ -45,12 +45,12 @@ public class dashboardController {
 
     @FXML
     void btnListening(ActionEvent event) {
-
+        LoadUI("ExerciseListening/Listening");
     }
 
     @FXML
     void btnReading(ActionEvent event) {
-
+        LoadUI("ExerciseReading/Reading");
     }
 
     @FXML
