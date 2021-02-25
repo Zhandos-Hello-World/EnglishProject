@@ -55,7 +55,7 @@ public class dashboardController {
 
     @FXML
     void btnVocabulary(ActionEvent event) {
-
+        LoadUI("Vocabulary/Vocabulary");
     }
     public void btnGrammarChoice(){
         LoadUI("");

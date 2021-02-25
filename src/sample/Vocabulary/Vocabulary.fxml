@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Vocabulary.VocabularyController">
+   <left>
+      <BorderPane fx:id="installScene" prefHeight="2.0" prefWidth="636.0" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="432.0" prefWidth="603.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btn1" layoutX="87.0" layoutY="237.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="134.0" text="Button" />
+                  <Button fx:id="btn2" layoutX="250.0" layoutY="237.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="134.0" text="Button" />
+                  <Button fx:id="btn3" layoutX="406.0" layoutY="237.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="134.0" text="Button" />
+                  <Button fx:id="btn4" layoutX="87.0" layoutY="328.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="134.0" text="Button" />
+                  <Button fx:id="btn5" layoutX="250.0" layoutY="328.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="134.0" text="Button" />
+                  <Button fx:id="btn6" layoutX="406.0" layoutY="328.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="134.0" text="Button" />
+                  <Label fx:id="progressShow" layoutX="568.0" layoutY="14.0" prefHeight="46.0" prefWidth="45.0" text="0 / 100" />
+                  <Label fx:id="scoreShow" layoutX="542.0" layoutY="65.0" prefHeight="18.0" prefWidth="51.0" text="score:" />
+                  <Button fx:id="checkBtn" layoutX="473.0" layoutY="181.0" mnemonicParsing="false" text="next" />
+                  <Label fx:id="word" layoutX="265.0" layoutY="74.0" prefHeight="107.0" prefWidth="281.0" text="Word" textAlignment="CENTER">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Error" layoutX="28.0" layoutY="20.0" prefHeight="39.0" prefWidth="218.0" />
+               </children></AnchorPane>
+         </top>
+      </BorderPane>
+   </left>
+   <right>
+      <VBox prefHeight="431.0" prefWidth="176.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="179.0" text="Add own vocabulary" />
+            <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="150.0" text="Built-in vocabulary" />
+            <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="182.0" text="Save Word" />
+            <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="186.0" text="Open with saved words" />
+            <Button fx:id="getActionRUENEvent" mnemonicParsing="false" prefHeight="64.0" prefWidth="178.0" text="EN - RU" />
+            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="180.0" text="Your mistakes" />
+            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="154.0" text="Save Progress" />
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
