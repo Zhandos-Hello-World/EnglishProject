@@ -1,49 +1,55 @@
 .btns{
-    -fx-background-color: #0D0138FF;
+    -fx-background-color: linear-gradient(to bottom left, #66B7AAFF, #40B3D0FF);
 }
 .btns:hover{
-    -fx-background-color: #0D1E5BFF;
+    -fx-background-color: #48E398FF;
 }
 .btns:pressed{
-    -fx-background-color: #0D0D79FF;
+    -fx-background-color: #34A56FFF;
 }
-
 .paneMenu{
-    -fx-background-color: #0D0138FF;
+    -fx-background-color: linear-gradient(to bottom left, #40E0D0FF, #66DDAAFF);
 }
 
-
-
-.paneMenuMini{
-    -fx-background-color: #8813A2FF;
-    -fx-stroke: black;
-}
 .paneTop{
-    -fx-background-color: #8813A2FF;
+    -fx-background-color: linear-gradient(to bottom right, #40E0D0FF, #66DDAAFF);
 }
 
 
 .GrammarStyle{
-    -fx-background-color: green;
+    -fx-background-color: linear-gradient(to bottom right, green, deepskyblue);
 }
 .GrammarStyle:hover{
-    -fx-background-color: #00B600FF;
+    -fx-background-color:linear-gradient(to bottom left,  #00D200FF, green);
 }
 .VocabularyStyle{
-    -fx-background-color: orange;
+    -fx-background-color:linear-gradient(to bottom left,  orange, red);
 }
 .VocabularyStyle:hover{
-    -fx-background-color: #FFCF00FF;
+   -fx-background-color:linear-gradient(to bottom left,  orange, #FFCF00FF);
 }
 .ListeningStyle{
-    -fx-background-color: deepskyblue;
+    -fx-background-color: linear-gradient(to bottom left, deepskyblue, #0048BAFF);
 }
 .ListeningStyle:hover{
-    -fx-background-color: #00D8FFFF;
+    -fx-background-color: linear-gradient(to bottom left, deepskyblue, #00D8FFFF);
 }
 .ReadingStyle{
-    -fx-background-color: darkred;
+    -fx-background-color: linear-gradient(to bottom left, darkred, red);;
 }
 .ReadingStyle:hover{
-    -fx-background-color: red;
+    -fx-background-color: linear-gradient(to bottom left, #FF033EFF, red);;
+}
+
+.btnsV{
+    -fx-background-color: #ffffff;
+}
+.btnsV:hover{
+    -fx-background-color: darkgrey;
+}
+.btnsV:pressed{
+    -fx-background-color: gray;
+}
+.label1{
+    -fx-text-fill: linear-gradient(to bottom left, #40E0D0FF, #66DDAAFF);;
 }

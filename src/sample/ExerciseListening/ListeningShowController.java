@@ -11,8 +11,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
-public class ListeningShowController extends dataBaseListening implements Initializable {
 
+public class ListeningShowController extends dataBaseListening implements Initializable {
     @FXML
     private MenuButton btn1;
     @FXML
@@ -71,7 +71,7 @@ public class ListeningShowController extends dataBaseListening implements Initia
     }
 
     @FXML
-    private void play(ActionEvent event){
+    private void play(){
 
     }
     @FXML

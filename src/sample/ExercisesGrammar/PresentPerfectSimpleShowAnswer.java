@@ -1,10 +1,8 @@
-package sample.ExercisesGrammar.Button2;
+package sample.ExercisesGrammar;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
-import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
@@ -16,13 +14,11 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 
-import java.io.IOException;
-import java.net.ResponseCache;
+
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 //This class for change Scene and show mistakes
 public class PresentPerfectSimpleShowAnswer extends PresentPerfectSimpleController implements Initializable {

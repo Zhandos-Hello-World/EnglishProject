@@ -3,16 +3,12 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -40,12 +36,16 @@ public class dashboardController {
 
     @FXML
     void btnGrammar(ActionEvent event) {
-        LoadUI("Grammar");
+        LoadUI("ExercisesGrammar/PresentPerfectSimple1");
+        pnlStatus.setStyle("-fx-background-color: linear-gradient(to bottom right, green, deepskyblue);");
+        pnlStatusName.setText("Grammar");
     }
 
     @FXML
     void btnListening(ActionEvent event) {
         LoadUI("ExerciseListening/Listening");
+        pnlStatus.setStyle("-fx-background-color: linear-gradient(to bottom left, deepskyblue, #0048BAFF);");
+        pnlStatusName.setText("Listening");
     }
 
     @FXML
@@ -56,9 +56,6 @@ public class dashboardController {
     @FXML
     void btnVocabulary(ActionEvent event) {
         LoadUI("Vocabulary/Vocabulary");
-    }
-    public void btnGrammarChoice(){
-        LoadUI("");
     }
     public void LoadUI(String ui){
         Parent root = null;

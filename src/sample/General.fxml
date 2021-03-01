@@ -2,90 +2,41 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.RadialGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="mainBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GeneralController">
    <left>
-      <HBox prefHeight="491.0" prefWidth="220.0" styleClass="paneMenu" stylesheets="@style.css" BorderPane.alignment="CENTER">
+      <HBox prefHeight="491.0" prefWidth="229.0" styleClass="paneMenu" stylesheets="@style.css" BorderPane.alignment="CENTER">
          <children>
-            <Pane prefHeight="491.0" prefWidth="41.0" styleClass="paneMenuMini" stylesheets="@style.css" />
-            <VBox prefHeight="491.0" prefWidth="179.0">
+            <VBox prefHeight="491.0" prefWidth="229.0">
                <children>
-                  <Label prefHeight="75.0" prefWidth="177.0" text="English A2 ">
+                  <Label prefHeight="75.0" prefWidth="221.0" text="       English A2 " textFill="#f8f8f8e0">
                      <font>
-                        <Font size="36.0" />
+                        <Font name="Californian FB Italic" size="39.0" />
                      </font>
-                     <textFill>
-                        <RadialGradient centerX="0.6449814126394051" centerY="0.41428571428571426" radius="0.5">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.9599999785423279" green="0.2207999974489212" blue="0.2207999974489212" opacity="0.8799999952316284" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </textFill>
                   </Label>
-                  <Button fx:id="dashboardButton" mnemonicParsing="false" onAction="#dashboard" prefHeight="51.0" prefWidth="177.0" styleClass="btns" stylesheets="@style.css" text="Dashboard" textFill="WHITE" />
-                  <Button fx:id="myAccountButton" mnemonicParsing="false" onAction="#myAccount" prefHeight="51.0" prefWidth="177.0" styleClass="btns" stylesheets="@style.css" text="My Account" textFill="WHITE" />
-                  <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#settings" prefHeight="51.0" prefWidth="177.0" styleClass="btns" stylesheets="@style.css" text="Settings" textFill="WHITE" />
-                  <Button fx:id="helpButton" mnemonicParsing="false" onAction="#help" prefHeight="51.0" prefWidth="177.0" styleClass="btns" stylesheets="@style.css" text="Help" textFill="WHITE" />
-                  <Button fx:id="authorButton" mnemonicParsing="false" onAction="#author" prefHeight="51.0" prefWidth="177.0" styleClass="btns" stylesheets="@style.css" text="About Author" textFill="WHITE" />
-                  <ImageView fitHeight="162.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/GeneralImages/ImageForGenerally.png" />
-                     </image>
-                  </ImageView>
+                  <Button fx:id="dashboardButton" mnemonicParsing="false" onAction="#dashboard" prefHeight="70.0" prefWidth="229.0" styleClass="btns" stylesheets="@style.css" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font></Button>
+                  <Button fx:id="myAccountButton" mnemonicParsing="false" onAction="#myAccount" prefHeight="70.0" prefWidth="229.0" styleClass="btns" stylesheets="@style.css" text="My Account" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font></Button>
+                  <Button fx:id="helpButton" mnemonicParsing="false" onAction="#help" prefHeight="70.0" prefWidth="229.0" styleClass="btns" stylesheets="@style.css" text="Help" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font></Button>
+                  <Button fx:id="authorButton" mnemonicParsing="false" onAction="#author" prefHeight="70.0" prefWidth="229.0" styleClass="btns" stylesheets="@style.css" text="About Author" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font></Button>
                </children>
             </VBox>
          </children>
       </HBox>
    </left>
-   <center>
-      <Pane prefHeight="473.0" prefWidth="787.0" style="-fx-background-color: #0D0138FF;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="491.0" fitWidth="783.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/GeneralImages/https___www.history.com_.image_MTYyNDg1MjE3MTI1Mjc5Mzk4_topic-london-gettyimages-760251843-promo.jpg" />
-               </image>
-            </ImageView>
-            <Label layoutX="320.0" layoutY="379.0" prefHeight="123.0" prefWidth="259.0" text="Welcome ">
-               <font>
-                  <Font size="48.0" />
-               </font>
-               <textFill>
-                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.9882352948188782" green="0.6352941393852234" blue="0.3137255012989044" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.5333333611488342" green="0.07450980693101883" blue="0.6352941393852234" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </RadialGradient>
-               </textFill>
-            </Label>
-         </children>
-      </Pane>
-   </center>
 </BorderPane>

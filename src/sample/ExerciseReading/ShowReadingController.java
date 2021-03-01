@@ -1,17 +1,12 @@
 package sample.ExerciseReading;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.fxml.LoadException;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
@@ -27,14 +22,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
-import sample.ExercisesGrammar.Button2.PresentPerfectSimpleController;
-import sample.GeneralController;
-
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class ShowReadingController extends ReadingController implements Initializable{
     private static final String STANDARD_BUTTON_STYLE = "-fx-background-color: #C40233FF;";
@@ -44,7 +33,6 @@ public class ShowReadingController extends ReadingController implements Initiali
     @FXML
     private BorderPane installScene;
     private static int check = 1;
-
     private static int b = 0;
     private final static int[] height = {1200, 900, 800, 900, 1200, 800};
     private static int[] election;
