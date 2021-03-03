@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="431.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="pnlStatus" cache="true" prefHeight="60.0" prefWidth="784.0" styleClass="paneTop" stylesheets="@style.css">
+         <children>
+            <Label fx:id="pnlStatusName" layoutX="132.0" layoutY="7.0" prefHeight="46.0" prefWidth="188.0" text="About Author" textFill="WHITE">
+               <font>
+                  <Font name="Candara Light Italic" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="47.0" layoutY="90.0" prefHeight="274.0" prefWidth="720.0" text="Hello everyone! Welcome to Enbite. I devoloped this program for my groups(15p). My full name is Baimurat Zhandos. I developed this program from scratch. I used &quot;Java&quot; programming language and &quot;JavaFX&quot;. If you are interested in my work or my code, you can see it in my repository in githab &quot;https://github.com/Zhandos-Hello-World/EnglishProject&quot;. Good luck!" wrapText="true">
+         <font>
+            <Font name="Calibri Light Italic" size="21.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

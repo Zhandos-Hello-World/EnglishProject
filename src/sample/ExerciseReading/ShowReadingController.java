@@ -22,8 +22,13 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 public class ShowReadingController extends ReadingController implements Initializable{
     private static final String STANDARD_BUTTON_STYLE = "-fx-background-color: #C40233FF;";
@@ -109,7 +114,7 @@ public class ShowReadingController extends ReadingController implements Initiali
         Label question = new Label(getQuestion(b - 1, index));
         question.setPadding(new Insets(0, 0, 0, 0));
         question.setWrapText(true);
-        question.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 19));
+        question.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.ITALIC, 19));
 
         MenuItem []menuItems = new MenuItem[getAnswerForQuestion(b - 1, index).length];
         for(int i = 0; i < getAnswerForQuestion(b - 1, 0).length; i++){
@@ -200,6 +205,25 @@ public class ShowReadingController extends ReadingController implements Initiali
                     if(election[i] == getNumberOFAnswer(b - 1)[i]){
                         count++;
                     }
+                }
+                try{
+                    Scanner scanner = new Scanner(new File("R0"));
+                    int []arr = new int[6];
+                    int x = 0;
+                    while(scanner.hasNext()){
+                        arr[x] = scanner.nextInt();
+                        x++;
+                    }
+                    scanner.close();
+                    arr[b] = (int)count;
+                    PrintWriter pw = new PrintWriter(new File("R0"));
+                    for(int i: arr){
+                        pw.println(i);
+                    }
+                    pw.close();
+                }
+                catch (FileNotFoundException ex){
+                    System.out.print("Hello error");
                 }
                 count = (count / (double)election.length) * 10;
                 //This texts for show statistics

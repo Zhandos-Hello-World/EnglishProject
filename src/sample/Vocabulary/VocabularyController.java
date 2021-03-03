@@ -44,9 +44,7 @@ public class VocabularyController implements Initializable {
     //true for en, false for ru.
     private static boolean EnRu = true;
     private static File filepath;
-    private static final String[]dataLocationSave = {"C:\\Users\\Zhandos\\Documents\\GitHub\\EnglishProject\\src\\sample\\Vocabulary\\Progress\\SaveProgress",
-            "C:\\Users\\Zhandos\\Documents\\GitHub\\EnglishProject\\src\\sample\\Vocabulary\\Progress\\YourMistakeWordSave",
-            "C:\\Users\\Zhandos\\Documents\\GitHub\\EnglishProject\\src\\sample\\Vocabulary\\Progress\\YourWordSave"};
+    private static final String[]dataLocationSave = {"SaveProgress", "YourMistakeWordSave", "YourWordSave"};
 
     private static void setCorrectAnswerData(){
         Arrays.fill(correctAnswerData, (byte)2);

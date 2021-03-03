@@ -5,19 +5,18 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="431.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane fx:id="pnlStatus" cache="true" prefHeight="60.0" prefWidth="784.0" styleClass="paneTop" stylesheets="@style.css">
          <children>
-            <Label fx:id="pnlStatusName" layoutX="132.0" layoutY="7.0" prefHeight="46.0" prefWidth="188.0" text="About Author" textFill="WHITE">
+            <Label fx:id="pnlStatusName" layoutX="132.0" layoutY="7.0" prefHeight="46.0" prefWidth="188.0" text="Help" textFill="WHITE">
                <font>
                   <Font name="Candara Light Italic" size="31.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Label layoutX="47.0" layoutY="90.0" prefHeight="274.0" prefWidth="720.0" text="Hello everyone! Welcome to Enbite. I devoloped this program for my groups(15p). My full name is Baimurat Zhandos. I developed this program from scratch. I used &quot;Java&quot; programming language and &quot;JavaFX&quot;. If you are interested in my work or my code, you can see it in my repository in githab &quot;https://github.com/Zhandos-Hello-World/EnglishProject&quot;. Good luck!" wrapText="true">
+      <Label layoutX="41.0" layoutY="78.0" prefHeight="274.0" prefWidth="720.0" text="If you find bugs then you can write to my email or direct to instagram (preferably by email). instagram: dzhbaimurat01. E-mail: 200103398@stu.sdu.edu.kz. The program is intuitive. Good luck!" wrapText="true">
          <font>
             <Font name="Calibri Light Italic" size="21.0" />
          </font>

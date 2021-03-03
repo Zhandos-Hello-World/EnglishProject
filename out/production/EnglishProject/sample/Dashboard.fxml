@@ -12,7 +12,7 @@
    <children>
       <Pane fx:id="pnlStatus" cache="true" prefHeight="60.0" prefWidth="613.0" styleClass="paneTop" stylesheets="@style.css">
          <children>
-            <Label fx:id="pnlStatusName" layoutX="132.0" layoutY="7.0" prefHeight="46.0" prefWidth="154.0" text="Dashboard">
+            <Label fx:id="pnlStatusName" layoutX="132.0" layoutY="7.0" prefHeight="46.0" prefWidth="154.0" text="Dashboard" textFill="WHITE">
                <font>
                   <Font name="Candara Light Italic" size="31.0" />
                </font>

@@ -22,7 +22,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 //I extends dataBaseGrammar for give data from dataBaseGrammar
-public class PresentPerfectSimpleController extends dataBaseGrammar implements Initializable {
+public class GrammarL extends dataBaseGrammar implements Initializable {
     //I call id vBoxAdd for change scene when user in click button which is "1", "2", "3", "4" or "Check answer"
     @FXML
     private VBox vBoxAdd;
@@ -34,7 +34,7 @@ public class PresentPerfectSimpleController extends dataBaseGrammar implements I
     @FXML
     private BorderPane InstallationScene;
 
-    protected static int [] election = {2,2,2,2,2,2,2,2,2,2};
+    protected static int [] election = {3,3,3,3,3,3,3,3,3,3};
 
 
     //set texts from (super class)dataBaseGrammar
@@ -71,7 +71,8 @@ public class PresentPerfectSimpleController extends dataBaseGrammar implements I
         stackPanePane.getChildren().add(rectangle);
         //We give getS11 from dataBaseGrammar
         Label label = new Label(getS21());
-        label.setFont(Font.font("Times New Roman", FontWeight.BLACK, FontPosture.REGULAR, 20));
+        label.setFont(Font.font("Times New Roman", FontWeight.BLACK, FontPosture.ITALIC, 20));
+        label.setWrapText(true);
         stackPanePane.getChildren().add(label);
         return stackPanePane;
     }
@@ -85,7 +86,7 @@ public class PresentPerfectSimpleController extends dataBaseGrammar implements I
             @Override
             public void handle(ActionEvent event) {
                 //New Scene which will be display correctAnswers
-                LoadUI("PresentPerfectSimple1ShowAnswers");
+                LoadUI("ShowAnswer");
             }
         });
         checkAnswer.setMinWidth(200);
@@ -100,22 +101,22 @@ public class PresentPerfectSimpleController extends dataBaseGrammar implements I
     //The choice method through arg define index choices(array).
     private MenuButton choice(int i){
         //this method for MenuButton.
-        MenuItem choice1 = new MenuItem("since");
-        MenuItem choice2 = new MenuItem("for");
-        MenuButton menuButton = new MenuButton("      ", null, choice1, choice2);
+        MenuItem []menuItems = new MenuItem[getChoice(i).length];
+        for(int x = 0; x < menuItems.length; x++){
+            menuItems[x] = new MenuItem(getChoice(i, x));
+        }
+
+        MenuButton menuButton = new MenuButton("      ", null, menuItems);
         menuButton.setMinWidth(100);
         menuButton.setMinHeight(40);
         menuButton.setStyle("-fx-background-color: white; -fx-stroke: black; -fx-text-fill: black");
-        choice1.setOnAction(event -> {
-            //since = 0;
-            election[i] = 0;
-            menuButton.setText(choice1.getText());
-        });
-        choice2.setOnAction(event -> {
-            //for = 1;
-            election[i] = 1;
-            menuButton.setText(choice2.getText());
-        });
+        for(int x = 0; x < menuItems.length; x++) {
+            int finalX = x;
+            menuItems[x].setOnAction(event -> {
+                menuButton.setText(menuItems[finalX].getText());
+                election[i] = finalX;
+            });
+        }
         return menuButton;
     }
 
@@ -155,7 +156,7 @@ public class PresentPerfectSimpleController extends dataBaseGrammar implements I
         try {
             root = FXMLLoader.load(getClass().getResource(ui + ".fxml"));
         } catch (IOException e) {
-            Logger.getLogger(PresentPerfectSimpleController.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(GrammarL.class.getName()).log(Level.SEVERE, null, e);
         }
         InstallationScene.setCenter(root);
     }

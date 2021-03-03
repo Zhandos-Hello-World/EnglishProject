@@ -4,7 +4,6 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -15,22 +14,21 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
 
 //This class for change Scene and show mistakes
-public class PresentPerfectSimpleShowAnswer extends PresentPerfectSimpleController implements Initializable {
+public class ShowAnswer extends GrammarL implements Initializable {
     //I create vBoxAddA for show all texts and mistakes etc.
     @FXML
     private VBox vBoxAddA;
-    //I created for install another Scene when user click on buttons.
-    @FXML
-    private BorderPane InstallationScene;
 
-    private FlowPane fp;
-
+    private static FlowPane fp;
 
     // The statistics method show all correct answers
     private StackPane statistics(){
@@ -42,6 +40,14 @@ public class PresentPerfectSimpleShowAnswer extends PresentPerfectSimpleControll
             if(election[i] == c21[i]){
                 count++;
             }
+        }
+        try{
+            PrintWriter pw = new PrintWriter(new File("G0"));
+            pw.print((double)count);
+            pw.close();
+        }
+        catch (FileNotFoundException ex){
+            System.out.print("Hello error");
         }
         //This texts for show statistics
         Label[]labels = {new Label("You have completed this test."),
@@ -73,8 +79,8 @@ public class PresentPerfectSimpleShowAnswer extends PresentPerfectSimpleControll
         Label label1 = new Label(getE21(n, (byte)0));
         Label label2 = new Label(getE21(n, (byte)1));
         //give values for labels with class Font which contains in the javafx
-        label1.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 25));
-        label2.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 25));
+        label1.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.ITALIC, 20));
+        label2.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.ITALIC, 20));
         //This is for numbers in exercise
         //here We add numbers, labels, choices in the flowPane
         fp.getChildren().add(numbers(n + 1));
@@ -91,10 +97,11 @@ public class PresentPerfectSimpleShowAnswer extends PresentPerfectSimpleControll
         Rectangle rectangle = new Rectangle();
         rectangle.setWidth(740);
         rectangle.setHeight(150);
-        rectangle.setFill(new Color(.29,.54,.86, 1));
-        Label label = new Label(getECAR21(getC21()[i]));
+        rectangle.setFill(new Color(.40,.71,.28, 1));
+        /////////////////
+        Label label = new Label(getApp(i));
         label.setTextFill(new Color(1,1,1, 1));
-        label.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 25));
+        label.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.ITALIC, 20));
         label.setWrapText(true);
         label.setPadding(new Insets(20, 20, 20, 20));
         stackPane.getChildren().add(rectangle);
@@ -108,21 +115,13 @@ public class PresentPerfectSimpleShowAnswer extends PresentPerfectSimpleControll
         //this default value if user doesn't choice answer
         String showTextAnswer = "no answer";
         if(election[i] == getC21()[i]){
-            if(election[i] == 0){
-                //since = 0;
-                showTextAnswer = "since";
-            }
-            else if(election[i] == 1){
-                //for = 1;
-                showTextAnswer = "for";
-            }
             check = true;
+            showTextAnswer = getChoice(i, election[i]);
         }
-        if(election[i] == 0){
-            showTextAnswer = "since";
-        }
-        else if(election[i] == 1){
-            showTextAnswer = "for";
+        else{
+            if(election[i] < 3){
+                showTextAnswer = getChoice(i, election[i]);
+            }
         }
         //Text need to convert in the Label
         Label showLabel = new Label(showTextAnswer);
@@ -132,12 +131,12 @@ public class PresentPerfectSimpleShowAnswer extends PresentPerfectSimpleControll
             showLabel.setStyle("-fx-text-fill: green");
         }
         //I give value for label
-        showLabel.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.REGULAR, 25));
+        showLabel.setFont(Font.font("Calibri Light", FontWeight.BLACK, FontPosture.ITALIC, 20));
         Rectangle rectangle = new Rectangle();
         rectangle.setFill(new Color(1,1,1, 1));
         rectangle.setStroke(new Color(.74,.74,.74, 1));
         rectangle.setHeight(50);
-        rectangle.setWidth(120);
+        rectangle.setWidth(140);
         StackPane stackPane = new StackPane();
         stackPane.getChildren().add(rectangle);
         stackPane.getChildren().add(showLabel);

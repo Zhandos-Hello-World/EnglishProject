@@ -8,12 +8,12 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="47.0" layoutY="44.0" mnemonicParsing="false" onAction="#btn1" prefHeight="124.0" prefWidth="197.0" text="Learning a new job" />
-            <Button layoutX="293.0" layoutY="44.0" mnemonicParsing="false" onAction="#btn2" prefHeight="124.0" prefWidth="197.0" text="The city where I live" />
-            <Button layoutX="533.0" layoutY="44.0" mnemonicParsing="false" onAction="#btn3" prefHeight="124.0" prefWidth="197.0" text="My friends" />
-            <Button layoutX="50.0" layoutY="216.0" mnemonicParsing="false" onAction="#btn4" prefHeight="124.0" prefWidth="197.0" text="Two Americans living in London" />
-            <Button layoutX="296.0" layoutY="216.0" mnemonicParsing="false" onAction="#btn5" prefHeight="124.0" prefWidth="197.0" text="London sightseeing" />
-            <Button layoutX="536.0" layoutY="216.0" mnemonicParsing="false" onAction="#btn6" prefHeight="124.0" prefWidth="197.0" text="London transport" />
+            <Button layoutX="47.0" layoutY="44.0" mnemonicParsing="false" onAction="#btn1" prefHeight="124.0" prefWidth="197.0" styleClass="btn2" stylesheets="@../style.css" text="Learning a new job" />
+            <Button layoutX="293.0" layoutY="44.0" mnemonicParsing="false" onAction="#btn2" prefHeight="124.0" prefWidth="197.0" styleClass="btn2" stylesheets="@../style.css" text="The city where I live" />
+            <Button layoutX="533.0" layoutY="44.0" mnemonicParsing="false" onAction="#btn3" prefHeight="124.0" prefWidth="197.0" styleClass="btn2" stylesheets="@../style.css" text="My friends" />
+            <Button layoutX="50.0" layoutY="216.0" mnemonicParsing="false" onAction="#btn4" prefHeight="124.0" prefWidth="197.0" styleClass="btn2" stylesheets="@../style.css" text="Two Americans living in London" />
+            <Button layoutX="296.0" layoutY="216.0" mnemonicParsing="false" onAction="#btn5" prefHeight="124.0" prefWidth="197.0" styleClass="btn2" stylesheets="@../style.css" text="London sightseeing" />
+            <Button layoutX="536.0" layoutY="216.0" mnemonicParsing="false" onAction="#btn6" prefHeight="124.0" prefWidth="197.0" styleClass="btn2" stylesheets="@../style.css" text="London transport" />
          </children>
       </AnchorPane>
    </center>

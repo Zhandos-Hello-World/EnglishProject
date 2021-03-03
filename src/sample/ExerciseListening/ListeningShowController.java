@@ -7,12 +7,17 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
-public class ListeningShowController extends dataBaseListening implements Initializable {
+public class ListeningShowController extends dataBaseListening implements Initializable{
     @FXML
     private MenuButton btn1;
     @FXML
@@ -137,6 +142,26 @@ public class ListeningShowController extends dataBaseListening implements Initia
                             labels[i].setTextFill(new Color(.67,0,.08, 1));
                         }
                     }
+                    labels[i].setFont(Font.font("Calibri Light", FontWeight.NORMAL, FontPosture.ITALIC, 15));
+                }
+                try{
+                    Scanner scanner = new Scanner(new File("l0"));
+                    int []arr = new int[6];
+                    int x = 0;
+                    while(scanner.hasNext()){
+                        arr[x] = scanner.nextInt();
+                        x++;
+                    }
+                    scanner.close();
+                    arr[b] = count;
+                    PrintWriter pw = new PrintWriter(new File("l0"));
+                    for(int i: arr){
+                        pw.println(i);
+                    }
+                    pw.close();
+                }
+                catch (FileNotFoundException ex){
+                    System.out.print("Hello error");
                 }
                 String statictics = "You have completed this test.\nCorrect answers: " + count + "/6.\nYour score is " + (int)(((double)(count) / 6.0) * 100 * 100) / 100 + "%\nCheck your answers:";
                 Title.setText(statictics);

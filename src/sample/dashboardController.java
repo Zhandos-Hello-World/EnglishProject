@@ -36,7 +36,7 @@ public class dashboardController {
 
     @FXML
     void btnGrammar(ActionEvent event) {
-        LoadUI("ExercisesGrammar/PresentPerfectSimple1");
+        LoadUI("ExercisesGrammar/GrammarL");
         pnlStatus.setStyle("-fx-background-color: linear-gradient(to bottom right, green, deepskyblue);");
         pnlStatusName.setText("Grammar");
     }
@@ -51,11 +51,15 @@ public class dashboardController {
     @FXML
     void btnReading(ActionEvent event) {
         LoadUI("ExerciseReading/Reading");
+        pnlStatus.setStyle("-fx-background-color: linear-gradient(to bottom right, green, deepskyblue);");
+        pnlStatusName.setText("Reading");
     }
 
     @FXML
     void btnVocabulary(ActionEvent event) {
         LoadUI("Vocabulary/Vocabulary");
+        pnlStatus.setStyle("-fx-background-color: linear-gradient(to bottom right, green, deepskyblue);");
+        pnlStatusName.setText("Vocabulary");
     }
     public void LoadUI(String ui){
         Parent root = null;

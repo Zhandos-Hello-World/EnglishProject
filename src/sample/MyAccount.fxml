@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -10,11 +12,11 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ProgressController">
    <children>
-      <Pane fx:id="pnlStatus" cache="true" prefHeight="60.0" prefWidth="784.0" styleClass="paneTop" stylesheets="@style.css">
+      <Pane cache="true" prefHeight="60.0" prefWidth="784.0" styleClass="paneTop" stylesheets="@style.css">
          <children>
-            <Label fx:id="pnlStatusName" layoutX="126.0" layoutY="7.0" prefHeight="46.0" prefWidth="185.0" text="My Account">
+            <Label layoutX="126.0" layoutY="7.0" prefHeight="46.0" prefWidth="185.0" text="My Account" textFill="WHITE">
                <font>
                   <Font name="Candara Light Italic" size="31.0" />
                </font>
@@ -23,7 +25,7 @@
       </Pane>
       <AnchorPane prefHeight="432.0" prefWidth="784.0">
          <children>
-            <GridPane layoutX="65.0" layoutY="202.0" prefHeight="102.0" prefWidth="134.0">
+            <GridPane layoutX="97.0" layoutY="209.0" prefHeight="102.0" prefWidth="134.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -36,14 +38,27 @@
                <children>
                   <Label prefHeight="40.0" prefWidth="150.0" text="Name: " />
                   <Label prefHeight="18.0" prefWidth="126.0" text="Last name:" GridPane.rowIndex="1" />
-                  <Label text="Zhandos" GridPane.columnIndex="1" />
-                  <Label text="Baimurat" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="name" text="Zhandos" GridPane.columnIndex="1" />
+                  <Label fx:id="lastname" text="Baimurat" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Label GridPane.rowIndex="2" />
                   <Label text="Age:" GridPane.rowIndex="2" />
-                  <Label text="unkown" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="unknown" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
-            <Circle fill="#909294" layoutX="120.0" layoutY="107.0" radius="80.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#909294" layoutX="165.0" layoutY="106.0" radius="80.0" stroke="BLACK" strokeType="INSIDE" />
+            <ProgressBar fx:id="percentLShow" layoutX="399.0" layoutY="115.0" prefHeight="18.0" prefWidth="258.0" progress="0.0" />
+            <ProgressBar fx:id="percentGShow" layoutX="399.0" layoutY="40.0" prefHeight="18.0" prefWidth="258.0" progress="0.0" />
+            <ProgressBar fx:id="percentRShow" layoutX="399.0" layoutY="80.0" prefHeight="18.0" prefWidth="258.0" progress="0.0" />
+            <ProgressBar fx:id="percentVShow" layoutX="399.0" layoutY="149.0" prefHeight="18.0" prefWidth="258.0" progress="0.0" />
+            <Button layoutX="548.0" layoutY="280.0" mnemonicParsing="false" onAction="#actionReset" prefHeight="78.0" prefWidth="134.0" styleClass="btnsV" stylesheets="@style.css" text="Reset all progress" />
+            <Label layoutX="303.0" layoutY="137.0" prefHeight="46.0" prefWidth="95.0" text="Vocabulary" />
+            <Label layoutX="303.0" layoutY="101.0" prefHeight="46.0" prefWidth="95.0" text="Listening" />
+            <Label layoutX="303.0" layoutY="66.0" prefHeight="46.0" prefWidth="95.0" text="Reading" />
+            <Label layoutX="303.0" layoutY="26.0" prefHeight="46.0" prefWidth="95.0" text="Grammar" />
+            <Label fx:id="percentGr" layoutX="675.0" layoutY="40.0" prefHeight="18.0" prefWidth="38.0" />
+            <Label fx:id="percentRe" layoutX="675.0" layoutY="80.0" prefHeight="18.0" prefWidth="38.0" />
+            <Label fx:id="percentLi" layoutX="675.0" layoutY="115.0" prefHeight="18.0" prefWidth="38.0" />
+            <Label fx:id="percentVo" layoutX="675.0" layoutY="147.0" prefHeight="18.0" prefWidth="38.0" />
          </children>
       </AnchorPane>
    </children>

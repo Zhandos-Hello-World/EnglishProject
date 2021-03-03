@@ -35,10 +35,10 @@
     -fx-background-color: linear-gradient(to bottom left, deepskyblue, #00D8FFFF);
 }
 .ReadingStyle{
-    -fx-background-color: linear-gradient(to bottom left, darkred, red);;
+    -fx-background-color: linear-gradient(to bottom left, darkred, red);
 }
 .ReadingStyle:hover{
-    -fx-background-color: linear-gradient(to bottom left, #FF033EFF, red);;
+    -fx-background-color: linear-gradient(to bottom left, #FF033EFF, red);
 }
 
 .btnsV{
@@ -51,5 +51,30 @@
     -fx-background-color: gray;
 }
 .label1{
-    -fx-text-fill: linear-gradient(to bottom left, #40E0D0FF, #66DDAAFF);;
+    -fx-text-fill: linear-gradient(to bottom left, #40E0D0FF, #66DDAAFF);
+}
+
+.btn1{
+    -fx-background-radius: 10;
+    -fx-background-color: #FFFFFFF5;
+}
+.btn1:hover{
+    -fx-background-color: forestgreen;
+    -fx-text-fill: white;
+}
+.btn1:pressed{
+    -fx-background-color: darkgreen;
+    -fx-text-fill: white;
+}
+.btn2{
+    -fx-background-radius: 10;
+    -fx-background-color: #FFFFFFF5;
+}
+.btn2:hover{
+    -fx-background-color: #0FC0FCF5;
+    -fx-text-fill: white;
+}
+.btn2:pressed{
+    -fx-background-color: #0A7CA2F5;
+    -fx-text-fill: white;
 }
