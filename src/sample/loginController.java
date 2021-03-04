@@ -40,19 +40,7 @@ public class loginController implements Initializable{
     private static Stage stage;
 
 
-    public void loginButton(ActionEvent event) throws IOException {
-        if(usernameTextField.getText().equals("") || enterPasswordField.getText().equals("")){
-            loginMessageLabel.setText("Please enter username and password");
-            // Временно
-            Parent fxml = FXMLLoader.load(getClass().getResource("General.fxml"));
-            Scene scene = new Scene(fxml);
-            Stage stage1 = new Stage();
-            stage1.setScene(scene);
-            stage1.setResizable(false);
-            stage1.show();
-            closeStageLogin();
-            ///////////////////////////
-        }
+    public void loginButton() throws IOException {
         boolean check = false;
         for(int i = 0; i < logpasw.length; i++){
             if(usernameTextField.getText().equals(logpasw[i][0]) && enterPasswordField.getText().equals(logpasw[i][1])){
