@@ -19,12 +19,12 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class loginController implements Initializable{
-    private static final String [][]arr = {{"Adilkhan", "Timuruly"}, {"Belgibayeva", "Zarina"}, {"Amangaliyev", "Daulet"}, {"Zhumagaliyev", "Alibi"}, {"Amantaev", "Madi"},
+    private static final String [][]arr = {{"Kamila", "Khojabergenova"},{"Adilkhan", "Timuruly"}, {"Belgibayeva", "Zarina"}, {"Amangaliyev", "Daulet"}, {"Zhumagaliyev", "Alibi"}, {"Amantaev", "Madi"},
             {"Myrzagulov", "Nursultan"}, {"Baimurat", "Zhandos"}, {"Uali", "Abdimalik"}, {"Bastemi", "Madiyar"}, {"Tasbolat", "Zangar"}, {"Katekov", "Erkebulan"},
             {"Sarsenbay", "Rakhim"}, {"Nessipkulov", "Yrysbek"}, {"Serik", "Kaussar"}, {"Kurmanali", "Markiya"}, {"Nurlanbek", "Karlygash"}, {"Sanakuly", "Dauirbek"},
             {"Rakhmanberdi", "Yerkebulan"}, {"Sagalov", "Zhandos"}, {"Sagitzhanova", "Gulsezim"}, {"Naraly", "Zharkyn"}, {"Yergeshbayev", "Sherzod"}, {"Smetullayev", "Bakhtiyar"}};
 
-    private static final String[][] logpasw = {{"AdilkhanTimuruly.enbite", "Vx2{UJ"}, {"BelgibayevaZarina.enbite", "U9QNfK"}, {"AmangaliyevDaulet.enbite", "h;E7GT"}, {"ZhumagaliyevAlibi.enbite", "]MSd6R"}, {"AmantaevMadi.enbite", "A5`x=;"},
+    private static final String[][] logpasw = {{"KhojabergenovaKamila.enbite", ";4L!QT"},{"AdilkhanTimuruly.enbite", "Vx2{UJ"}, {"BelgibayevaZarina.enbite", "U9QNfK"}, {"AmangaliyevDaulet.enbite", "h;E7GT"}, {"ZhumagaliyevAlibi.enbite", "]MSd6R"}, {"AmantaevMadi.enbite", "A5`x=;"},
             {"MyrzagulovNursultan.enbite", "9G(kSL"}, {"BaimuratZhandos.enbite", "u3[gCm"}, {"UaliAbdimalik.enbite", "x^3#YE"}, {"BastemiMadiyar.enbite", "Rt;4`N"}, {"TasbolatZangar.enbite", "S=#a3)"}, {"KatekovErkebulan.enbite", "4/?Gkb"},
             {"SarsenbayRakhim.enbite", "7hnRau"}, {"NessipkulovYrysbek.enbite", ";8t!YU"}, {"SerikKaussar.enbite", "=7d=Hw"}, {"KurmanaliMarkiya.enbite", "6VN{zd"}, {"NurlanbekKarlygash.enbite", "5y'Nt-"}, {"SanakulyDauirbek.enbite", "xK4`z~"},
             {"RakhmanberdiYerkebulan.enbite", "fu6XWL"}, {"SagalovZhandos.enbite", "b[W5;>"}, {"SagitzhanovaGulsezim.enbite", "Kf2=$3"}, {"NaralyZharkyn.enbite", "mu2tKK"}, {"YergeshbayevSherzod.enbite", "jN7Trf"}, {"SmetullayevBakhtiyar.enbite", "Abc7bZ"}};

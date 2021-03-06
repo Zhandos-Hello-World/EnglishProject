@@ -40,7 +40,7 @@ public class GeneralController implements Initializable {
         }
         @FXML
         void dashboard(ActionEvent event) {
-            LoadUI("dashboard");
+            LoadUI("Dashboard");
         }
         @FXML
         void help(ActionEvent event) {
@@ -66,7 +66,7 @@ public class GeneralController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        LoadUI("dashboard");
+        LoadUI("Dashboard");
     }
 }
 
