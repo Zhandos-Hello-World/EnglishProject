@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Main extends Application {
-
+//u3[gCm  BaimuratZhandos.enbite
     @Override
     public void start(Stage primaryStage) throws IOException {
         Parent fxml = FXMLLoader.load(getClass().getResource("Intro.fxml"));
